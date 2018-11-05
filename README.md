@@ -13,6 +13,8 @@ Check does MySQL has installed?
 mysql -u root -p
 ```
 Please read the GUIDELINE document
+```
+
 Create new database with `charset` is `utf8` and `collation` is `utf8_unicode_ci`
 
 ```
