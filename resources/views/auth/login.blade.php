@@ -1,66 +1,48 @@
-@extends('layouts.app')
+@extends('layouts.authLogin')
 
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <div class="panel panel-default">
-                <div class="panel-heading">Login</div>
-                <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
-                        {{ csrf_field() }}
-
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
-
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}">
-
-                                @if ($errors->has('email'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control" name="password">
-
-                                @if ($errors->has('password'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <div class="checkbox">
-                                    <label>
-                                        <input type="checkbox" name="remember"> Remember Me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-sign-in"></i> Login
-                                </button>
-
-                                <a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+<h2 class="auth-form__title">LOGIN</h2>
+<p class="auth-form__description">
+    Welcome back! Log into your account & see what’s changed.
+</p>
+<form class="form-horizontal col-md-6 offset-md-3 mt-5" role="form" method="POST" action="{{ url('/login') }}">
+    {{ csrf_field() }}
+    <div class="form-group text-left{{ $errors->has('email') ? ' has-error' : '' }}">
+        <label for="input-email" class="control-label">Email</label>
+        <input type="email" class="form-control" id="input-email" name="email" placeholder="Email" autocomplete="off" spellcheck="false">
+        @if ($errors->has('email'))
+            <span class="help-block text-danger">
+                <strong>{{ $errors->first('email') }}</strong>
+            </span>
+        @endif
     </div>
-</div>
+    <div class="form-group text-left{{ $errors->has('password') ? ' has-error' : '' }}">
+        <label for="input-password" class="control-label">Password</label>
+        <input type="password" class="form-control" id="input-password" name="password" placeholder="Password" autocomplete="off" spellcheck="false">
+        @if ($errors->has('password'))
+            <span class="help-block text-danger">
+                <strong>{{ $errors->first('password') }}</strong>
+            </span>
+        @endif
+    </div>
+    <div class="form-group text-right">
+        <a class="btn btn-link auth-form__link" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
+    </div>
+    <button class="btn btn--brown btn-block btn-lg text-uppercase" id="btn-submit" type="submit">
+        Log In
+    </button>
+    <div class="text-center mt-4 d-xl-none d-lg-none">
+        Don't have an account? <a href="{{ url('/register') }}">Register</a>
+    </div>
+</form>
+@endsection
+
+@section('navigation')
+<h1 class="auth-navigation__title">Camp Izza</h1>
+<p class="auth-navigation__description">
+    I DO NOT have an account
+</p>
+<a role="button" href="{{ url('/register') }}" class="btn btn--green btn-lg border border-white text-uppercase">
+    Register an account
+</a>
 @endsection
