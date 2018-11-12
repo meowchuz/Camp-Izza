@@ -13,7 +13,9 @@
         <a href="javascript:void(0);" title="Menu" style="font-size:18px;" class="icon" onclick="myFunction()">&#9776;</a>
     </div>
     <div class="rc_nav_right">
-        <a href="#" role="button" class="btn">CampIzza Main Page</a>
-        <a href="#" role="button" class="btn">Login</a>
+        <a href="{{ url('/logout') }}" class="dropdown-item">
+                        <i class="ni ni-user-run"></i>
+                        <span>Logout</span>
+                    </a>
     </div>
 </nav>

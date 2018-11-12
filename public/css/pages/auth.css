@@ -1,0 +1,184 @@
+@import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great|Raleway:300,400,500,600,700);
+
+.btn,
+.form-control {
+  border-radius: 0;
+}
+
+.btn--green {
+  background-color: #3E9723;
+  color: #fff;
+}
+
+.btn--green:hover,
+.btn--green:focus {
+  background-color: #36821e;
+  color: #fff;
+}
+
+.btn--green:active {
+  background-color: #47ac28;
+  color: #fff;
+}
+
+.btn--pink {
+  background-color: #ED1566;
+  color: #fff;
+}
+
+.btn--pink:hover,
+.btn--pink:focus {
+  background-color: #d8115b;
+  color: #fff;
+}
+
+.btn--pink:active {
+  background-color: #ef2d75;
+  color: #fff;
+}
+
+.btn--blue {
+  background-color: #01C9F1;
+  color: #fff;
+}
+
+.btn--blue:hover,
+.btn--blue:focus {
+  background-color: #01b4d8;
+  color: #fff;
+}
+
+.btn--blue:active {
+  background-color: #0ed6fe;
+  color: #fff;
+}
+
+.btn--yellow {
+  background-color: #F1CC01;
+  color: #fff;
+}
+
+.btn--yellow:hover,
+.btn--yellow:focus {
+  background-color: #d8b701;
+  color: #fff;
+}
+
+.btn--yellow:active {
+  background-color: #fed90e;
+  color: #fff;
+}
+
+.btn--brown {
+  background-color: #5E3C17;
+  color: #fff;
+}
+
+.btn--brown:hover,
+.btn--brown:focus {
+  background-color: #4a2f12;
+  color: #fff;
+}
+
+.btn--brown:active {
+  background-color: #72491c;
+  color: #fff;
+}
+
+.navbar {
+  font-family: "Fredericka the Great", sans-serif;
+  font-size: 1.125rem;
+}
+
+.navbar__brand {
+  height: 3rem;
+}
+
+.auth {
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.auth .navbar {
+  z-index: 1030;
+}
+
+.auth-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  color: #fff;
+  text-align: center;
+  background-image: url("/images/children.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.auth-navigation__blur {
+  padding: 3rem;
+  background-color: rgba(33, 33, 33, 0.5);
+}
+
+.auth-navigation__title {
+  font-family: "Fredericka the Great", sans-serif;
+  font-size: 5rem;
+}
+
+.auth-navigation__description {
+  font-size: 1.5rem;
+}
+
+.auth-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.auth-form__title {
+  font-family: "Fredericka the Great", sans-serif;
+  font-size: 3rem;
+  color: #3E9723;
+}
+
+.auth-form__description {
+  font-size: 1rem;
+  color: #757575;
+}
+
+.auth-form__link {
+  color: #757575;
+}
+
+.auth-form__link:hover {
+  color: #828282;
+}
+
+@media (max-width: 48rem) {
+  .auth-form {
+    position: relative;
+  }
+
+  .auth-navigation {
+    display: none;
+  }
+}
+

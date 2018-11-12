@@ -1,0 +1,20 @@
+@import url(https://fonts.googleapis.com/css?family=Fredericka+the+Great|Raleway:300,400,500,600,700);
+
+.card{
+    position: relative;
+}
+
+h1,h2,h3,h4,h5{
+    color: #3E9723;
+}
+
+.btn-primary{
+    background: #F1CC01;
+    border: none;
+}
+
+.btn-secondary{
+    background: rgb(86, 225, 230);
+    border: none;
+}
+

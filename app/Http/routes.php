@@ -17,4 +17,13 @@ Route::get('/', function () {
 
 Route::auth();
 
+
 Route::get('/home', 'HomeController@index');
+
+Route::get('/registrationForm1','registrationFormController@registrationForm1');
+Route::post('/registrationForm1','registrationFormController@handleRegistrationForm1');
+Route::get('/registrationForm2','registrationFormController@registrationForm2');
+Route::post('/registrationForm2','registrationFormController@handleRegistrationForm2');
+Route::get('/registrationForm3','registrationFormController@registrationForm3');
+Route::post('/registrationForm3','registrationFormController@handleRegistrationForm3');
+Route::get('/registrationFormReview','registrationFormController@registrationFormReview');
