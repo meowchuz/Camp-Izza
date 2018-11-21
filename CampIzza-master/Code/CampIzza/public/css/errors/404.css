@@ -1,0 +1,26 @@
+body {
+  height: calc(100vh - 74.22px);
+}
+
+.error-404 {
+  height: 100%;
+  background-image: url("/img/learning-programming.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.error-404__container {
+  margin-top: 10rem;
+}
+
+.error-404__title {
+  font-family: "Fredericka the Great", sans-serif;
+  font-size: 5rem;
+  color: #F1CC01;
+}
+
+.error-404__description {
+  font-size: 1.125rem;
+}
+

@@ -1,0 +1,13 @@
+{
+    "/js/bootstrap.js": "/js/bootstrap.js",
+    "/css/bootstrap.css": "/css/bootstrap.css",
+    "/css/argon.css": "/css/argon.css",
+    "/css/errors/404.css": "/css/errors/404.css",
+    "/css/pages/auth.css": "/css/pages/auth.css",
+    "/css/pages/dashboard.css": "/css/pages/dashboard.css",
+    "/js/pages/parent/contact.js": "/js/pages/parent/contact.js",
+    "/js/pages/owner/parent.js": "/js/pages/owner/parent.js",
+    "/js/pages/owner/campers.js": "/js/pages/owner/campers.js",
+    "/js/pages/parent/campers.js": "/js/pages/parent/campers.js",
+    "/js/argon.js": "/js/argon.js"
+}

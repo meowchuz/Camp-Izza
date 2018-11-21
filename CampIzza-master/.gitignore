@@ -1,0 +1,12 @@
+Code/Campizza/vendor
+Code/Campizza/node_modules
+Code/Campizza/public/storage
+Code/Campizza/Homestead.yaml
+Code/Campizza/Homestead.json
+Code/Campizza/package-lock.json
+Code/Campizza/composer.lock
+Code/Campizza/.env
+
+Code/AutomationTest/package-lock.json
+Code/AutomationTest/vendor
+Code/AutomationTest/node_modules

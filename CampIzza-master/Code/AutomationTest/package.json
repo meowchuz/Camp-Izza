@@ -1,0 +1,17 @@
+{
+  "name": "automationtest",
+  "version": "1.0.0",
+  "description": "Automation Testing for Camp Izza",
+  "main": "index.js",
+  "scripts": {
+    "download-selenium": "curl -O http://selenium-release.storage.googleapis.com/3.9/selenium-server-standalone-3.9.1.jar",
+    "mv-selenium": "mkdir vendor && mv selenium-server-standalone-3.9.1.jar vendor",
+    "init": "npm run download-selenium && npm run mv-selenium",
+    "start-selenium": "java -jar vendor/selenium-server-standalone-3.9.1.jar"
+  },
+  "author": "Nam Vo",
+  "license": "ISC",
+  "dependencies": {
+    "webdriverio": "^4.14.0"
+  }
+}

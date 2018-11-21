@@ -1,0 +1,44 @@
+@import '../_variables';
+@import '../mixin';
+@import '../vendor/bootstrap/mixins/breakpoints';
+
+@each $color, $value in $theme-colors {
+    .bg--#{$color} {
+        background-color: $value;
+    }
+
+    @include button(".btn--#{$color}", $value);
+}
+
+.header {
+    min-height: 18.75rem;
+}
+
+.card {
+    .card-header {
+        h3 {
+            font-family: "Fredericka the Great", sans-serif;
+            font-size: 1.75rem;
+            color: $ciz-pink;
+        }
+    }
+}
+
+// .form-control:disabled,
+// .form-control[readonly] {
+//     background-color: #fff;
+// }
+
+@include media-breakpoint-up(md) {
+    .main-content {
+        .container-fluid {
+            padding: 0 15px !important;
+        }
+    }
+}
+
+@include media-breakpoint-up(xs) {
+    .header {
+        min-height: 10rem;
+    }
+}

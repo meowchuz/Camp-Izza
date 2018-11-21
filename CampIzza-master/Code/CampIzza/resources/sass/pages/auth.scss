@@ -1,0 +1,96 @@
+@import '../_variables';
+@import '../mixin';
+
+.btn,
+.form-control {
+    border-radius: 0;
+}
+
+@each $color, $value in $theme-colors {
+    @include button(".btn--#{$color}", $value);
+}
+
+.navbar {
+    font-family: "Fredericka the Great", sans-serif;
+    font-size: 1.125rem;
+
+    &__brand {
+        height: 3rem;
+    }
+}
+
+.auth {
+    height: 100vh;
+    overflow-x: hidden;
+
+    .navbar {
+        z-index: $zindex-fixed;
+    }
+}
+
+.auth-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    background-image: url('/img/children.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &__blur {
+        padding: 3rem;
+        background-color: rgba(33, 33, 33, .5);
+    }
+
+    &__title {
+        font-family: "Fredericka the Great", sans-serif;
+        font-size: 5rem;
+    }
+
+    &__description {
+        font-size: 1.5rem;
+    }
+}
+
+.auth-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    &__title {
+        font-family: "Fredericka the Great", sans-serif;
+        font-size: 3rem;
+        color: $ciz-green;
+    }
+
+    &__description {
+        font-size: 1rem;
+        color: #757575;
+    }
+
+    &__link {
+        color: #757575;
+
+        &:hover {
+            color: lighten(#757575, 5%);
+        }
+    }
+}
+
+@media(max-width: 48rem) {
+    .auth-form {
+        position: relative;
+    }
+
+    .auth-navigation {
+        display: none;
+    }
+}
